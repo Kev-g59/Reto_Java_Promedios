@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Notas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gestión de Notas del Curso</h1>
+        <p>Ingresa el nombre y las notas de los 3 certámenes de los 10 alumnos</p>
+    </header>
+
+    <main>
+
+
+
+
+
+    <!-- Ingreso de los datos -->
+        <section class="tarjeta">
+            <h2>Ingreso de datos</h2>
+            <p id="contador" class="contador">Alumno 1 de 10</p>
+
+
+
+
+            <form id="formulario">
+                <label for="nombre">Nombre del alumno</label>
+                <input type="text" id="nombre" placeholder="Ej: Ana Pérez">
+
+                <div class="fila-notas">
+                    <div>
+                        <label for="nota1">Certamen 1</label>
+                        <input type="text" id="nota1" placeholder="0 - 100">
+                    </div>
+                    <div>
+                        <label for="nota2">Certamen 2</label>
+                        <input type="text" id="nota2" placeholder="0 - 100">
+                    </div>
+                    <div>
+                        <label for="nota3">Certamen 3</label>
+                        <input type="text" id="nota3" placeholder="0 - 100">
+                    </div>
+                </div>
+
+
+
+
+
+        <p id="mensaje" class="mensaje"></p>
+
+                <button type="submit" id="boton">Agregar alumno</button>
+            </form>
+        </section>
+
+
+
+
+
+    <!-- Resultados -->
+        <section class="tarjeta" id="resultados">
+            <h2>Resultados</h2>
+            <p id="aviso">Los resultados aparecerán aquí cuando ingreses los 10 alumnos.</p>
+
+
+            <h3>Notas de cada alumno</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Certamen 1</th>
+                        <th>Certamen 2</th>
+                        <th>Certamen 3</th>
+                        <th>Promedio</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaAlumnos"></tbody>
+            </table>
+
+
+
+
+            <h3>Resumen del curso</h3>
+            <div class="resumen">
+                <div class="dato">
+                    <span>Promedio Certamen 1</span>
+                    <strong id="promC1">-</strong>
+                </div>
+                <div class="dato">
+                    <span>Promedio Certamen 2</span>
+                    <strong id="promC2">-</strong>
+                </div>
+                <div class="dato">
+                    <span>Promedio Certamen 3</span>
+                    <strong id="promC3">-</strong>
+                </div>
+                <div class="dato">
+                    <span>Promedio General</span>
+                    <strong id="promGeneral">-</strong>
+                </div>
+                <div class="dato aprobado">
+                    <span>Aprobados</span>
+                    <strong id="aprobados">-</strong>
+                </div>
+                <div class="dato reprobado">
+                    <span>Reprobados</span>
+                    <strong id="reprobados">-</strong>
+                </div>
+            </div>
+
+
+
+
+
+            <h3>Alumnos ordenados por promedio</h3>
+            <ol id="listaOrdenada"></ol>
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

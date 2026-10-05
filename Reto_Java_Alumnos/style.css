@@ -1,0 +1,257 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #eef2f7;
+    color: #1f2937;
+}
+
+
+
+
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+}
+
+
+
+
+header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+/* (formulario y resultados) */
+.tarjeta {
+    background-color: white;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+.tarjeta h2 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+
+
+.tarjeta h3 {
+    margin-top: 28px;
+    color: #374151;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 6px;
+}
+
+
+
+.contador {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+
+
+/* Formulario */
+label {
+    display: block;
+    font-weight: 600;
+    margin: 14px 0 6px 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+
+
+.fila-notas {
+    display: flex;
+    gap: 16px;
+}
+
+.fila-notas div {
+    flex: 1;
+}
+
+
+
+
+button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+
+
+
+button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+
+
+
+/* Mensajes de error o éxito */
+.mensaje {
+    min-height: 20px;
+    margin: 14px 0 0 0;
+    font-weight: 600;
+}
+
+    .error {
+    color: #dc2626;
+}
+
+    .exito {
+    color: #16a34a;
+}
+
+/* Tabla de los alumnos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+
+
+
+/* Resumen de las notas */
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+
+
+.dato {
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+.dato span {
+    display: block;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.dato strong {
+    font-size: 1.6rem;
+    color: #1e3a8a;
+}
+
+.dato.aprobado strong {
+    color: #16a34a;
+}
+
+.dato.reprobado strong {
+    color: #dc2626;
+}
+
+
+
+
+/* Lista ordenada */
+ol li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+
+/* Vista para celular*/
+@media (max-width: 600px) {
+    .fila-notas {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .resumen {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+    font-size: 0.85rem;
+    }
+}
+
+
